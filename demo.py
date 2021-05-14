@@ -15,7 +15,7 @@ import subprocess as sp
 
 
 PROJECT_FOLDER = os.path.dirname(os.path.realpath(__file__))
-PYTHON_EXE = 'python'
+PYTHON_EXE = 'python3'
 MODEL_FOLDER = os.path.join(PROJECT_FOLDER, 'models')
 DATA_FOLDER = os.path.join(PROJECT_FOLDER, 'data')
 
@@ -109,7 +109,8 @@ args = [
     '--valid_step', '5000',
     '--warmup_steps', '4000',
     '--normalize_data', 'true',
-    '--fp16', 'true',
+    #'--fp16', 'true',
+    '--fp16', 'false',
     '--lr_schedule', 'noam',
     '--loss_scale', '0.0',
     '--no_token_id', 'true',

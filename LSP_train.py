@@ -245,8 +245,7 @@ else:
 if args.local_rank == -1 or get_rank() == 0:
     train_logger = open(join(log_dir, 'train_log.txt'), 'a+', buffering=1)
     eval_logger = open(join(log_dir, 'eval_log.txt'), 'a+', buffering=1)
-    print('epoch,global_step,step,mean_loss,mean_ppl,n_token_real,'
-          'n_token_total,epoch_time', file=train_logger)
+    print('epoch,global_step,step,mean_loss,mean_ppl,n_token_real,n_token_total,epoch_time', file=train_logger)
     print('epoch,global_step,step,eval_loss,eval_ppl', file=eval_logger)
 
 global_step = 0
